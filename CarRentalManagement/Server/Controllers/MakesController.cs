@@ -57,10 +57,10 @@ namespace CarRentalManagement.Server.Controllers
 
             return make;*/
           var make = await _unitOfWork.Makes.Get(q=>q.Id == id);
-            if (make == null) 
-            {
-                return NotFound();
-            }
+          if (make == null) 
+          {
+              return NotFound();
+          }
           return Ok(make);    
         }
 
